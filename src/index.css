@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-task {
+    background: linear-gradient(90deg, rgba(4,0,78,1) 0%, rgba(24,24,57,1) 50%, rgba(0,0,8,1) 100%);
+}
+
+.bg-task-1 {
+    background: linear-gradient(90deg, rgba(47,40,176,1) 0%, rgba(34,34,103,1) 50%, rgba(74,74,136,1) 100%);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.bg-task-1:hover {
+    background: linear-gradient(90deg, rgba(47,40,176,1) 0%, rgba(4,4,47,1) 50%, rgba(74,74,136,1) 100%);
+    transition: all 0.5s ease-out;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bg-list {
+    display: flex;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+}

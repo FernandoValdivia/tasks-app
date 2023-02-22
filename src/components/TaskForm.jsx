@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { TaskContext } from "../context/TaskContext";
+import { BiSave } from 'react-icons/all';
 
 export default function TaskForm() {
   const [title, setTitle] = useState("");
@@ -16,7 +17,7 @@ export default function TaskForm() {
 
   return (
     <div className="max-w-md mx-auto">
-      <form className="bg-slate-800 p-10 mb-4" onSubmit={handleSubmit}>
+      <form className="bg-slate-800 p-10 mb-4 rounded-xl" onSubmit={handleSubmit}>
         <h1 className="text-2xl font-bold text-white mb-2">Crea tu tarea</h1>
         <input
           className="bg-slate-300 p-3 w-full mb-2"
@@ -29,14 +30,15 @@ export default function TaskForm() {
         />
         <textarea
           className="bg-slate-300 p-3 w-full mb-2"
-          placeholder="descripcion tarea"
+          placeholder="Escribe la descripcion"
           onChange={(e) => {
             setDescription(e.target.value);
           }}
           value={description}
         ></textarea>
-        <button className="bg-indigo-500 px-3 py-1 text-white w-full">
+        <button className="bg-task-1 text-white w-full flex py-2 gap-3 items-center justify-center">
           Guardar tarea
+          <BiSave />
         </button>
       </form>
     </div>
