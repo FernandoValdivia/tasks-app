@@ -9,12 +9,12 @@ export function TaskContextProvider(props) {
     const [tasks, setTasks] = useState(data);
 
     function createTask(task) {
-    //agrega un nuevo arreglo
-    setTasks([...tasks, {
-        title: task.title,
-        id: tasks.length,
-        description: task.description
-    }])
+        //agrega un nuevo arreglo
+        setTasks([...tasks, {
+            title: task.title,
+            id: tasks.length,
+            description: task.description
+        }])
     }
 
     function deleteTask(taskId) {

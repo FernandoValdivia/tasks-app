@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { TaskContext } from "../context/TaskContext";
-import { BiPen, BiPencil, BiTrash } from "react-icons/all";
+import { BiPencil, BiTrash } from "react-icons/all";
 
 export default function TaskCard({ task }) {
   const { deleteTask } = useContext(TaskContext);
@@ -19,7 +19,10 @@ export default function TaskCard({ task }) {
         </button>
         
         {/* Editar */}
-        <button className="bg-sky-400 py-1 hover:bg-sky-300 hover:text-gray-600 flex items-center px-3 gap-2 rounded-r-xl">
+        <button className="bg-sky-400 py-1 hover:bg-sky-300 hover:text-gray-600 flex items-center px-3 gap-2 rounded-r-xl"
+        onClick={()=>{
+          alert('Sorry, aún no edita :c')
+        }}>
           Editar <BiPencil />
         </button>
       </div>

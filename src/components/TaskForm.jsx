@@ -10,7 +10,11 @@ export default function TaskForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    createTask({ title, description });
+    if (title && description) {
+      createTask({ title, description });
+    } else {
+      alert('Introduce algún valor al arreglo p, no te creas vivo')
+    }
     setTitle("");
     setDescription("");
   };
@@ -27,6 +31,7 @@ export default function TaskForm() {
           }}
           value={title}
           autoFocus
+          required
         />
         <textarea
           className="bg-slate-300 p-3 w-full mb-2"
@@ -34,6 +39,7 @@ export default function TaskForm() {
           onChange={(e) => {
             setDescription(e.target.value);
           }}
+          required
           value={description}
         ></textarea>
         <button className="bg-task-1 text-white w-full flex py-2 gap-3 items-center justify-center">
